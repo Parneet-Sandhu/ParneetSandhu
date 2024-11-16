@@ -253,6 +253,145 @@ body {
         margin-right: 0;  /* Remove margin on mobile */
     }
 }
+/* Explore Section Styles */
+.explore-section {
+    padding: 50px 20px;
+    background-color: #6b5450;
+}
+
+.explore-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+}
+
+/* Left Section Styles */
+.explore-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profile-image {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    aspect-ratio: 1;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.explore-heading {
+    background-color: #f5e6d3;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.explore-heading h2 {
+    color: #2d5d4b;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Right Section Styles */
+.explore-right {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.explore-box {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 30px;
+    transition: transform 0.3s ease;
+    min-height: 100px;
+}
+
+.explore-box:hover {
+    transform: scale(1.05);
+}
+
+/* Individual Box Colors */
+.about {
+    background-color: #e8e3e1;
+    color: #b91450;
+}
+
+.experience {
+    background-color: #f5e6d3;
+    color: #2d5d4b;
+}
+
+.skills {
+    background-color: #c5c1a5;
+    color: #ffffff;
+}
+
+.projects {
+    background-color: #c5c1a5;
+    color: #ffffff;
+}
+
+.blogs {
+    background-color: #c5c1a5;
+    color: #ffffff;
+}
+
+.contact {
+    background-color: #d4c3b3;
+    color: #ffffff;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    .explore-container {
+        flex-direction: column;
+    }
+
+    .explore-right {
+        grid-template-columns: fr;
+        gap: 10px;
+    }
+
+    /* Only target explore-box class */
+    .explore-right .explore-box {
+        height: 60px; /* Fixed height for explore boxes only */
+        min-height: unset;
+        width: 100%;
+        padding: 15px;
+        font-size: 1rem;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Reset specific explore boxes only */
+    .explore-right .skills,
+    .explore-right .projects,
+    .explore-right .blogs,
+    .explore-right .about,
+    .explore-right .experience,
+    .explore-right .contact {
+        height: 60px;
+    }
+}
 
 /*experience section*/
 .experience-section {
